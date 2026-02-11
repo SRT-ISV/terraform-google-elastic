@@ -16,9 +16,13 @@
 
 terraform {
   required_providers {
-    google = {
-      source = "hashicorp/google"
+    ec = {
+      source = "elastic/ec"
+      version = "0.12.4"
     }
   }
-  required_version = ">= 0.13"
+}
+
+provider "ec" {
+  apikey = var.ec_api_key
 }

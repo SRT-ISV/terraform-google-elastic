@@ -36,11 +36,9 @@ Basic usage of this module is as follows:
 
 ```hcl
 module "elastic" {
-  source  = "terraform-google-modules/elastic/google"
-  version = "~> 0.1"
-
-  project_id  = "<PROJECT ID>"
-  bucket_name = "gcs-test-bucket"
+source = "./modules"
+ec_project_name = var.project_name
+region          = var.region
 }
 ```
 
@@ -52,14 +50,13 @@ Functional examples are included in the
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| bucket\_name | The name of the bucket to create | `string` | n/a | yes |
-| project\_id | The project ID to deploy to | `string` | n/a | yes |
+| ec\_api\_key | n/a | `string` | `""` | yes |
+| project\_name | n/a | `string` | `"sl-prj1"` | no |
+| region | n/a | `string` | `"gcp-us-east1"` | no |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| bucket\_name | Name of the bucket |
+No outputs.
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

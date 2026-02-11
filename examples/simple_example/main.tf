@@ -15,8 +15,7 @@
  */
 
 module "elastic" {
-  source = "../.."
-
-  project_id  = var.project_id
-  bucket_name = var.bucket_name
+source = "./modules"
+ec_project_name = var.project_name
+region          = var.region
 }

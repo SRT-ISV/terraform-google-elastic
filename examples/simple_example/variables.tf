@@ -14,12 +14,22 @@
  * limitations under the License.
  */
 
-variable "project_id" {
-  description = "The ID of the project in which to provision resources."
-  type        = string
+variable "ec_api_key" {
+ type    = string
+ default = ""
 }
 
-variable "bucket_name" {
-  description = "The name of the bucket to create."
-  type        = string
+# variable "cluster_name" {
+#  type    = string
+#  default = ""
+# }
+
+variable "region" {
+ type    = string
+ default = "gcp-us-east1"
+}
+
+variable "project_name" {
+ type    = string
+ default = "sl-prj1"
 }

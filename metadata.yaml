@@ -26,7 +26,7 @@ spec:
       sourceType: git
     description:
       tagline: This is an auto-generated module.
-      detailed: "This module was generated from "
+      detailed: "This module provisions Elastic Cloud on GCP."
       preDeploy: To deploy this blueprint you must have an active billing account and billing permissions.
     icon: assets/icon.png
     costEstimate:
@@ -38,7 +38,6 @@ spec:
       description:
         - 1. Architecture description step no. 1
         - 2. Architecture description step no. 2
-        - 3. Architecture description step no. N
     documentation:
       - title: Hosting a Static Website
         url: https://cloud.google.com/storage/docs/hosting-static-website
@@ -50,6 +49,14 @@ spec:
       - name: ec_api_key
         varType: string
         defaultValue: ""
+        connections:
+          - source:
+              source: github.com/GoogleCloudPlatform/terraform-google-secret-manager//modules/simple-secret
+              version: "0.9.0"
+            spec:
+              # Maps the secret resource name to the ec_api_key variable
+              outputExpr: name
+              inputPath: .
       - name: region
         varType: string
         defaultValue: gcp-us-east1
@@ -65,3 +72,4 @@ spec:
       - cloudresourcemanager.googleapis.com
       - storage-api.googleapis.com
       - serviceusage.googleapis.com
+      - secretmanager.googleapis.com

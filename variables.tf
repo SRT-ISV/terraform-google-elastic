@@ -16,7 +16,7 @@
 
 variable "ec_api_key" {
  type    = string
- default = "essu_UXpGRU1rbzFkMEpWWVZsbFVUZDBOSGx3UzBNNk1sQjFaV3MyVldNMlFYZGFTSFJOWVZaNmJrUk1adz09AAAAAOVDko8="
+ default = ""
 }
 
 # variable "cluster_name" {

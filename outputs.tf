@@ -14,4 +14,39 @@
  * limitations under the License.
  */
 
+output "project_id" {
+  description = "The unique ID of the Elasticsearch project"
+  value       = module.elastic.project_id
+}
 
+output "project_name" {
+  description = "The name of the deployed project"
+  value       = module.elastic.project_name
+}
+
+/*
+output "api_key" {
+  description = "The name of the deployed project"
+  value       = module.elastic.ec_api_key
+} */
+
+output "cloud_id" {
+  description = "The Cloud ID for the Elastic Cloud project"
+  value       = module.elastic.cloud_id
+}
+
+output "elasticsearch_endpoint" {
+  description = "The API endpoint for Elasticsearch"
+  value       = module.elastic.elasticsearch_endpoint
+}
+
+output "kibana_url" {
+  description = "The UI URL for Kibana"
+  value       = module.elastic.kibana_url
+}
+
+output "project_credentials" {
+  description = "The auto-generated username and password"
+  value       = module.elastic.project_credentials
+  sensitive   = true 
+}

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-output "elastic_project_id" {
+output "ec_project_id" {
   description = "The unique ID of the Elasticsearch project"
-  value       = module.elastic.project_id
+  value       = module.elastic.ec_project_id
 }
 
-output "elastic_project_name" {
+output "ec_project_name" {
   description = "The name of the deployed project"
-  value       = module.elastic.project_name
+  value       = module.elastic.ec_project_name
 }
 
 /*

@@ -1,9 +1,9 @@
-output "project_id" {
+output "ec_project_id" {
   description = "The unique ID of the Elasticsearch project"
   value       = ec_elasticsearch_project.my_project.id
 }
 
-output "project_name" {
+output "ec_project_name" {
   description = "The project name provided as input"
   value       = var.ec_project_name
 }

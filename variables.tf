@@ -24,12 +24,12 @@ variable "ec_api_key" {
 #  default = ""
 # }
 
-variable "region" {
+variable "ec_region" {
  type    = string
  default = "gcp-us-east1"
 }
 
-variable "project_name" {
+variable "ec_project_name" {
  type    = string
  default = "sl-prj1"
 }

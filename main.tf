@@ -17,6 +17,6 @@
 
 module "elastic" {
 source = "./modules"
-ec_project_name = var.project_name
-region          = var.region
+ec_project_name = var.ec_project_name
+region          = var.ec_region
 }

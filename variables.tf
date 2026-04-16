@@ -19,6 +19,11 @@ variable "ec_api_key" {
  default = ""
 }
 
+variable "gcp_project_id" {
+ type    = string
+ default = "easysaas-adc-demo"
+}
+
 # variable "cluster_name" {
 #  type    = string
 #  default = ""
